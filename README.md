@@ -25,9 +25,9 @@ You can give the path of 'train.csv' and 'test.csv' to `run.py` file to get the 
 python run.py
 ```
 
-## API
+## Functions
 
-We have implemented several APIs to ease the train and test process, some of them are as follows:
+We have implemented several functions to ease the train and test process, some of them are as follows:
 
 ### Feature Generation
 
@@ -38,7 +38,7 @@ After cleaning the data and adding bias feature, you can use `build_data` functi
 In this function we add all the necessary features for finding the best model. Also, we use "log(1+x)" for heavy tailed features.  
 It generates features like invariant and transverse mass, sin, cos, norm, poly_features, .... 
 
-### Data preprocessing
+### Data preprocessing and cleaning
 
 This part contains splitting the train and test datas into 3 different classes (0,1,23), finding the missing data in feature 0 and replacement, adding bias term and normalizing the features.  
 
@@ -50,7 +50,7 @@ It has the below functions:
 In `build_data` functions, we also use "log(1+x)" function for heavy tailed features.  
 
 
-### Model selection
+### Model
 
 There is flag named `FLAG_MODEL` that you can use it to change the model of training in the `run.py` file (0 for Neural Network model and 1 for regularized logistic regression which gives better result between six different models when we have a single neuron)  
 
